@@ -1,11 +1,14 @@
 // src/productores/entities/productor.schema.ts
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document } from 'mongoose';
+import { Collection, Document } from 'mongoose';
 
 export type ProductorDocument = Productor & Document;
 
-@Schema()
+@Schema({ collection: 'productores' })
 export class Productor {
+  @Prop({ type: String, required: true })
+  _id: string;
+
   @Prop({ required: true })
   nombre: string;
 

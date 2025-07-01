@@ -3,7 +3,7 @@ import { Document } from 'mongoose';
 
 export type CompraDocument = Compra & Document;
 
-@Schema()
+@Schema({ collection: 'compras' })
 export class Compra {
   @Prop({ required: true })
   _id: string;

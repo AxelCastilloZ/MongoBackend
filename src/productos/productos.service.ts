@@ -32,4 +32,12 @@ export class ProductosService {
   stockBajo(min: number) {
     return this.model.find({ stock: { $lt: min } }).exec();
   }
+
+  findByProductor(productorId: string) {
+    return this.model.find({ productor_id: productorId }).exec();
+  }
+
+  findByCategoria(categoriaId: string) {
+    return this.model.find({ categoria_id: categoriaId }).exec();
+  }
 }
