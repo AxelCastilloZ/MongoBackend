@@ -24,7 +24,7 @@ export class EstadisticasService {
         },
       },
       { $sort: { totalVendidos: -1 } },
-      { $limit: 10 },
+      { $limit: 3 },
     ]);
   }
 

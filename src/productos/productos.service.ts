@@ -29,8 +29,8 @@ export class ProductosService {
     return this.model.findByIdAndDelete(id).exec();
   }
 
-  stockBajo(min: number) {
-    return this.model.find({ stock: { $lt: min } }).exec();
+  stockMinimo() {
+    return this.model.find().sort({ stock: 1 }).limit(1).exec();
   }
 
   findByProductor(productorId: string) {

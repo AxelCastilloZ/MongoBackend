@@ -1,5 +1,6 @@
 import { Controller, Get, Param, Query } from '@nestjs/common';
 import { EstadisticasService } from './estadisticas.service';
+import { BadRequestException } from '@nestjs/common';
 import {
   ApiTags,
   ApiOperation,

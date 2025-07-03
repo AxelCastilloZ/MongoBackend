@@ -12,17 +12,17 @@ import { ClientesModule } from './clientes/clientes.module';
   imports: [
     // MongooseModule.forRoot('mongodb://localhost:27017/feriaAgricultor'),
 
-    MongooseModule.forRoot(
-      'mongodb://root:root1234@localhost:27017/feriaAgricultor?authSource=feriaAgricultor',
-    ),
+    // MongooseModule.forRoot(
+    //   'mongodb://root:root1234@localhost:27017/feriaAgricultor?authSource=feriaAgricultor',
+    // ),
 
     // MongooseModule.forRoot(
     //   'mongodb://productor1:prod123@localhost:27017/feriaAgricultor?authSource=feriaAgricultor',
     // ),
 
-    // MongooseModule.forRoot(
-    //   'mongodb://cliente1:cli123@localhost:27017/feriaAgricultor?authSource=feriaAgricultor',
-    // ),
+    MongooseModule.forRoot(
+      'mongodb://cliente1:cli123@localhost:27017/feriaAgricultor?authSource=feriaAgricultor',
+    ),
 
     ProductoresModule,
     ProductosModule,

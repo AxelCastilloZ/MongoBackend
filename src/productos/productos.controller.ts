@@ -38,20 +38,14 @@ export class ProductosController {
     return this.productosService.findAll();
   }
 
-  @Get('stock-bajo')
-  @ApiOperation({ summary: 'Obtener productos con stock bajo' })
-  @ApiQuery({
-    name: 'min',
-    description: 'Stock mínimo para filtrar',
-    example: 20,
-  })
+  @Get('stock-minimo')
+  @ApiOperation({ summary: 'Obtener el producto con menor stock' })
   @ApiResponse({
     status: 200,
-    description: 'Productos con stock inferior al mínimo',
+    description: 'Producto con el stock más bajo',
   })
-  stockBajo(@Query('min') min: string) {
-    const minimo = parseInt(min);
-    return this.productosService.stockBajo(minimo);
+  stockMinimo() {
+    return this.productosService.stockMinimo();
   }
 
   @Get(':id')

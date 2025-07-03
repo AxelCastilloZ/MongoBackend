@@ -8,7 +8,7 @@ export class Venta {
   @Prop({ required: true, type: String })
   _id: string;
 
-  @Prop({ required: true })
+  @Prop({ type: Date, required: true })
   fecha: Date;
 
   @Prop({
@@ -47,7 +47,7 @@ export class Venta {
   total_venta: number;
 }
 
-export const VentaSchema = SchemaFactory.createForClass(Venta); // ✅ Asegúrate de tener esta línea
+export const VentaSchema = SchemaFactory.createForClass(Venta); 
 
 // import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 // import { Document } from 'mongoose';
